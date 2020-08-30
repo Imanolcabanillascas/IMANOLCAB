@@ -1,0 +1,417 @@
+body{
+background: 
+  linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(315deg, black 25%, transparent 25%),
+  linear-gradient(45deg, black 25%, transparent 25%);	
+  background-size: 2em 2em;
+  background-color: #232323;
+ }
+
+ /* Formatting text to  
+    fill the page */
+    .text { 
+        font-size: 45px; 
+        
+    } 
+  
+    /* The progress bar -  
+    scroll indicator */
+    .line { 
+       background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        height: 5px; 
+        border-radius: 4px; 
+        width: 0%; 
+        position: fixed; 
+        top: 0; 
+    } 
+
+
+@media screen and (min-width: 600px) {
+.line{
+display:none;
+}
+}
+
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #00aeff, #a68eff);
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0,0,0,.12) 0 3px 13px 1px;
+}
+
+ *{
+ 	margin: 0px;
+ 	padding: 0px;	
+ }
+
+
+
+.bar-nav{
+	  display: flex;
+	 
+    list-style-type: none;
+ 
+overflow: hidden;
+ 
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+
+    font-family: 'Monoton', cursive;
+background-color: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+
+}
+.bar-nav li {
+   display: inline;
+	position: center;
+
+}
+
+  
+@media screen and (max-width: 600px) {
+.bar-nav{
+display:none;
+}
+}
+.icons{
+	
+margin-left: 1px;
+	margin-bottom: 2px;
+}
+.log{
+	width: 60px;
+	padding: 10px
+}
+ 
+.intro{
+	font-size: 5rem;
+    font-weight: 300;
+margin: auto;
+padding-top: 100px;
+padding-bottom: 200px;
+text-align: center;
+
+font-family: 'Monoton', cursive;
+background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+.intro p{
+
+animation-name: example;
+  animation-duration: 2s;
+
+  animation-iteration-count: infinite;
+
+
+}
+@keyframes example {
+     from {color: black;}
+  to {color: white;}
+  
+}
+
+
+
+
+
+ a:link, a:visited, a:active {
+    text-decoration:none;
+    text-decoration-color:white ;
+    font-size: 25px;
+}
+
+ 
+li a {
+    display: inline-block;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-family: 'Monoton', cursive;
+    font-size: 1rem;
+    overflow:hidden;
+}
+li a:hover{
+ background: #005C97;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-radius: 80px;
+
+color:white;
+}
+#sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+
+  left: -210px;
+  transition: all 500ms linear ;
+}
+
+#sidebar.active {
+  left:  0px;
+}
+
+#sidebar ul li {
+  color: rgba(230, 230, 230, .9);
+  list-style: none;
+  padding: 10px 10px;
+  border-bottom: 5px solid rgba(100, 100, 100, .3);
+  text-align: center;
+}
+
+.logo {
+  
+  display: block;
+  margin: 0 auto; 
+  width: 60%;
+}
+
+#sidebar .toggle-btn {
+  position: absolute;
+  left: 210px;
+  top: 0px;
+  cursor: pointer;
+  
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+
+#sidebar .toggle-btn .container {
+  display: block;
+  width: 40px;
+  text-align: center;
+  font-size: 40px;
+  border: 1px  #fff;
+  color: #fff;
+    top: 1.9rem;  
+  transition: all 0.2s;
+  padding-left: 10px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+.social-bar{
+
+   margin:40%;
+   font-size:60rem ;
+   flex-direction: column;
+}
+.icon{
+  color :white;
+  text-decoration:none;
+  padding: .5rem;
+  display: flex;
+  transition: all .3%; 
+}
+
+.icon-facebook2:hover{
+
+  background: #2E406E; 
+
+   
+}
+.icon-twitter:hover{background: #1FA2FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.icon-youtube:hover{
+
+  background: #B80E0E; 
+}
+
+.icon-instagram:hover{
+  background: #833ab4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.icon-whatsapp:hover{
+  background:green; 
+
+}
+.icon-linkedin:hover{
+  background: #00d2ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.icon-first-child{
+  border-radius: 0rem 0 0 0 ;
+}
+
+.icon-last-child{
+  border-radius: 0 0 0 0;
+}
+
+.icon:hover{
+  padding-right:  12px ;
+  border-radius: 2rem 2rem 2rem 2rem;
+  box-shadow: .0rem 0 0 .0rem rgba(0, 0, 0, 0);
+}
+
+.icono{
+  color: white;
+  text-decoration:none;
+  padding: .3rem;
+  transition: all .5%; 
+}
+.icono:hover{
+color: #09476D;
+}
+
+
+.forml{
+	background: 
+  linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(315deg, black 25%, transparent 25%),
+  linear-gradient(45deg, black 25%, transparent 25%);	
+  background-size: 2em 2em;
+  background-color: #232323;
+	}
+
+
+form {
+ display: grid;
+  padding: 1em;
+ background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border: 10px solid black;
+  margin: 1rem auto 1rem auto;
+  max-width: 400px;
+  padding: 1em;
+}
+form input {
+  background: #fff;
+  border: 1px solid #9c9c9c;
+
+}
+form button {
+  background: lightgrey;
+  padding: 0.7em;
+  width: 100%;
+  border: 0;
+}
+form button:hover {
+  background: gold;
+
+}
+
+label {
+  padding: 0.5em 0.5em 0.5em 0;
+ color: white;
+ font-family: 'Fjalla One', sans-serif;
+}
+
+input {
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+  
+}
+textarea{
+	padding: 0.7em;
+  margin-bottom: 0.5rem;
+  
+}
+input:focus {
+  outline: 3px solid gold;
+}
+
+footer{
+	text-align: center;
+	padding-bottom:  3.5%;
+	font-family: monospace;
+background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: white;
+font-size: 25px;
+
+   }
+
+#enviar{background-color: #43C64D;color: white;}
+#cancelar{background-color: #97180C; color:white;}
+#enviar:hover{
+	background-color: green;
+}
+#cancelar:hover{
+	background-color: red;
+}
+.card input {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+.toggle-btn{
+display:none;
+}
+}
+
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+
+background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+
+ /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* Add a dark-grey background on hover */
+}
